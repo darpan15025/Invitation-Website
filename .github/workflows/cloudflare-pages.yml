@@ -14,10 +14,11 @@ jobs:
       - name: Verify invitation assets
         run: |
           test -f index.html
-          test -f css/main.css
-          test -f js/app.js
-          test -f js/scratch.js
-          test -f js/effects.js
+          test -f shaadicanvas.html
+          test -f css/palace.css
+          test -f css/shaadicanvas.css
+          test -f js/palace.js
+          test -f js/shaadicanvas.js
           echo "Static site files OK (ready for Cloudflare Pages)."
 
   deploy:

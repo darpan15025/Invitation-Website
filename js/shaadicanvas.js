@@ -1,4 +1,37 @@
 (function () {
+  /** Sirf shubh vivah — mehndi, haldi, sangeet, reception, baraat, etc. off */
+  const WEDDING_ONLY = true;
+  const events = [
+    {
+      key: "wedding",
+      title: "Shubh Vivah",
+      when: "SOMVAAR · 14 DEC 2026 · SHAAM 7:00",
+      venue: "Goel Regency, Pilkhuwa",
+      description:
+        "Pheron ke saath bandhega saat janmon ka bandhan — aapki upasthiti hamari khushi hai.",
+      image: "assets/events/baraat.jpg",
+      alt: "Shubh vivah samaaroh",
+    },
+  ];
+
+  function renderEvents() {
+    const root = document.getElementById("eventsList");
+    if (!root) return;
+    const list = WEDDING_ONLY ? events.filter((e) => e.key === "wedding") : events;
+    root.innerHTML = list
+      .map(
+        (e) => `
+      <article class="event-card rv in">
+        <img src="${e.image}" alt="${e.alt}" loading="lazy" />
+        <p class="when">${e.when}</p>
+        <h3>${e.title}</h3>
+        <p>${e.description}</p>
+        <p class="when" style="margin-top: 8px; opacity: 0.9">${e.venue}</p>
+      </article>`
+      )
+      .join("");
+  }
+
   const app = document.getElementById("app");
   const opening = document.getElementById("opening");
   const openBtn = document.getElementById("openInvite");
@@ -15,6 +48,8 @@
     bindScratch();
     startCountdown();
   }
+
+  renderEvents();
 
   openBtn.addEventListener("click", openInvitation);
   try {

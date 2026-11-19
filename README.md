@@ -27,6 +27,10 @@ Preview this PR branch:
 
 Sections: palace site uses `#home`, `#jodi`, …; canvas site uses `#home`, `#invitation`, `#events`, `#venue`, `#rsvp`.
 
+**Wedding-only events:** `shaadicanvas.html` / `js/shaadicanvas.js` ab sirf **Shubh Vivah** dikhate hain — mehndi, haldi, sangeet, reception, baraat, preetibhoj, palaki sab hata diye gaye. Palace `index.html` mein bhi `#karyakram` ab ek hi vivah card hai.
+
+JoyInvite demo (`shaadicanvas.joyinvite.in`) agar purane 5-event bundle se chal raha ho, to deploy ke waqt `events` array mein sirf `key: 'wedding'` wala item rakhein, ya render line par `.filter(e => e.key === 'wedding')` lagayein.
+
 ## Local preview
 
 ```bash
