@@ -60,7 +60,7 @@
     if (hash) {
       const el = document.getElementById(hash);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
       }
       setActiveNav(hash);
     }

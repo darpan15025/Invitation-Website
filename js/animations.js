@@ -64,7 +64,11 @@
       }
       const header = document.getElementById("site-header");
       header?.classList.remove("is-hidden");
-      target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      target.scrollIntoView({
+        behavior: reduced ? "auto" : "smooth",
+        block: "start",
+        inline: "nearest",
+      });
       history.pushState(null, "", `#${id}`);
     });
   });

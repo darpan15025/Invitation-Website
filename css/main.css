@@ -22,8 +22,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
   scroll-padding-top: var(--header-height);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -162,12 +167,10 @@ body {
 
 .view {
   display: block;
-  min-height: 100dvh;
+  min-height: min(100dvh, 100vh);
   padding: 2rem 1.25rem 3rem;
   position: relative;
   scroll-margin-top: var(--header-height);
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 .view--hero {
@@ -434,6 +437,59 @@ body {
   font-size: 0.85rem;
   opacity: 0.85;
   margin: 0.25rem 0 0.5rem;
+  font-family: "Noto Serif Devanagari", serif;
+}
+
+.ganesh-verse {
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--maroon);
+  margin: 0.5rem auto 1rem;
+  max-width: 420px;
+}
+
+.family-triple {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.family-card {
+  background: #fffef9;
+  border: 2px solid rgba(92, 16, 24, 0.2);
+  padding: 1rem 1.1rem;
+  border-radius: 2px;
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.family-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 0 0.65rem;
+  color: var(--maroon);
+}
+
+.family-card--center {
+  border-color: var(--gold-dark);
+  box-shadow: 0 8px 24px rgba(61, 10, 16, 0.08);
+}
+
+.family-sign {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.family-card p {
+  margin: 0.2rem 0;
 }
 
 .floating-petals {
