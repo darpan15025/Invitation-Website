@@ -1,14 +1,31 @@
-# Tanya & Prabhat — Royal Indian Wedding Invitation
+# Tanya & Prabhat — Shubh Vivah (Palace Invitation)
 
-Static wedding invitation site (royal maroon & gold theme) with scratch-to-reveal date, goddess imagery, event miniatures, Google Maps, sparkles, and aatishbaazi (fireworks).
+Premium **single-page** royal Indian wedding invitation: palace gate opening, jaali hero, Ganesha vandana, Raja–Rani miniatures, scratch tithi, nimantran, karyakram, venue map, contact cards, and fireworks.
 
-## Shareable link (live now)
+## Main files
+
+| File | Purpose |
+|------|---------|
+| `index.html` | Palace invitation (full-width) |
+| `shaadicanvas.html` | **JoyInvite / ShaaDiCanvas** mobile canvas theme (480px) |
+| `css/palace.css` | Palace theme styles |
+| `css/shaadicanvas.css` | ShaaDiCanvas theme styles |
+| `js/palace.js` | Palace interactions |
+| `js/shaadicanvas.js` | Opening screen, scratch, countdown, dock nav |
+
+Assets: `assets/royal/` (Ganesha + couple art), `assets/events/` (baraat, palaki).
+
+## Shareable link (after merge to `main`)
 
 **https://raw.githack.com/darpan15025/Invitation-Website/main/index.html**
 
-Use hash routes, e.g. `#jodi`, `#shubh-tithi`, `#sthal`.
+Preview this PR branch:
 
-For a custom **Cloudflare Pages** URL (`*.pages.dev`), connect this repo in the Cloudflare dashboard or add `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` to GitHub Actions secrets.
+**https://raw.githack.com/darpan15025/Invitation-Website/cursor/netlify-royal-html-dc4d/index.html**
+
+**ShaaDiCanvas-style page:** add `/shaadicanvas.html` to any branch URL above.
+
+Sections: palace site uses `#home`, `#jodi`, …; canvas site uses `#home`, `#invitation`, `#events`, `#venue`, `#rsvp`.
 
 ## Local preview
 
@@ -16,39 +33,12 @@ For a custom **Cloudflare Pages** URL (`*.pages.dev`), connect this repo in the 
 python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8080
+Open http://127.0.0.1:8080 — tap **Nimantran Kholiye** on the palace gate.
 
-## Deploy on Cloudflare Pages
+## Cloudflare Pages
 
-### Option A — Git (recommended)
+- **Build command:** (empty)
+- **Output directory:** `/` (repository root)
 
-1. Push this repo to GitHub.
-2. In [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-3. Select `Invitation-Website`, branch `main` (or your feature branch).
-4. Build settings:
-   - **Framework preset:** None
-   - **Build command:** (leave empty)
-   - **Build output directory:** `/` (repository root)
-5. Deploy. Your public URL will be `https://<project-name>.pages.dev`.
-
-### Option B — Wrangler CLI
-
-```bash
-npx wrangler pages deploy . --project-name=tanya-prabhat-wedding
-```
-
-Requires `CLOUDFLARE_API_TOKEN` and account access.
-
-## Sections
-
-| Route | Content |
-|-------|---------|
-| `#ghar` | Hero, deities, fairy lights |
-| `#jodi` | Formal nimantan |
-| `#shubh-tithi` | Scratch card + countdown |
-| `#karyakram` | Baraat, Preetibhoj, Palkein |
-| `#sthal` | Goel Regency + map |
-| `#sampark` | Contact & WhatsApp |
-
-**Venue:** Goel Regency, Hapur Rd, Pilkhuwa, Uttar Pradesh 245304  
-**Date:** Monday, 14 December 2026, 7:00 PM
+**Venue:** Goel Regency, Hapur Rd, Pilkhuwa, UP 245304  
+**Date:** Monday, 14 December 2026 — Swagat Baraat 7:00 PM
