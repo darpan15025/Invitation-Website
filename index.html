@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/premium.css" />
+    <link rel="stylesheet" href="css/royal.css" />
   </head>
   <body>
     <div id="page-transition-overlay" aria-hidden="true"></div>
@@ -41,7 +42,17 @@
       <section id="ghar" class="view view--hero pattern-drift" data-view="ghar">
         <div class="mandala-ring mandala-glow" aria-hidden="true"></div>
         <div class="fairy-lights" aria-hidden="true"></div>
-        <div class="mandala-frame reveal is-visible">
+        <div class="mandala-frame mandala-frame--royal reveal is-visible">
+          <div class="royal-medallion" aria-hidden="false">
+            <img
+              src="assets/royal/ganesha-ornate.png"
+              alt="श्री गणेश"
+              width="240"
+              height="240"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
           <p class="invocation">॥ श्री गणेशाय नमः ॥</p>
           <p class="subtitle-dev">शुभ विवाह</p>
           <h1 class="couple-script">Tania &amp; Prabhat</h1>
@@ -58,30 +69,22 @@
             </button>
           </div>
         </div>
-        <div class="goddess-row reveal is-visible">
-          <figure class="goddess-card">
-            <img src="assets/gods/ganesha.jpg" alt="श्री गणेश" width="220" height="280" loading="lazy" />
-            <figcaption>श्री गणेश</figcaption>
-          </figure>
-          <figure class="goddess-card">
-            <img src="assets/gods/lakshmi.jpg" alt="माँ लक्ष्मी" width="220" height="280" loading="lazy" />
-            <figcaption>माँ लक्ष्मी</figcaption>
-          </figure>
-          <figure class="goddess-card">
-            <img src="assets/gods/durga.jpg" alt="माँ दुर्गा" width="220" height="280" loading="lazy" />
-            <figcaption>माँ दुर्गा</figcaption>
-          </figure>
-        </div>
       </section>
 
       <!-- JODI -->
-      <section id="jodi" class="view view--cream" data-view="jodi">
+      <section id="jodi" class="view view--cream view--cream--royal" data-view="jodi">
         <div class="floating-petals" aria-hidden="true"></div>
         <div class="ganesha-hero reveal">
           <p class="invocation invocation--dark">॥ श्री गणेशाय नमः ॥</p>
           <p class="nim-small nim-small--dark">Aadi Utpatti Hamara Saubhagya</p>
-          <div class="ganesha-arch">
-            <img src="assets/gods/ganesha.jpg" alt="श्री गणेश — विघ्नहर्ता" width="280" height="320" loading="lazy" />
+          <div class="ganesha-arch royal-ganesha-arch">
+            <img
+              src="assets/royal/ganesha-ornate.png"
+              alt="श्री गणेश — विघ्नहर्ता"
+              width="280"
+              height="280"
+              loading="lazy"
+            />
           </div>
           <p class="shloka">
             वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br />
@@ -91,7 +94,36 @@
             विघ्न हरण मंगल करण, श्री गणपति महाराज ।<br />
             प्रथम निमंत्रण आपको, पूरण करियो काज ॥
           </p>
-          <h2 class="section-title section-title--dark">Raja–Rani Ki Jodi</h2>
+          <h2 class="section-title section-title--dark section-title--royal">
+            Raja–Rani Ki Jodi
+          </h2>
+          <div class="royal-couple-row reveal">
+            <figure class="royal-portrait royal-portrait--bride">
+              <div class="royal-arch-frame">
+                <img
+                  src="assets/royal/bride-miniature.png"
+                  alt="वधू — तानिया"
+                  width="320"
+                  height="420"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>वधू — <em>तानिया</em></figcaption>
+            </figure>
+            <div class="royal-couple-ornament" aria-hidden="true">ॐ</div>
+            <figure class="royal-portrait royal-portrait--groom">
+              <div class="royal-arch-frame">
+                <img
+                  src="assets/royal/groom-miniature.png"
+                  alt="वर — प्रभात"
+                  width="320"
+                  height="420"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>वर — <em>प्रभात</em></figcaption>
+            </figure>
+          </div>
           <p class="nim-body nim-body--intro">
             Do parivaar, ek pavitra sangam — <strong>Tania</strong> aur
             <strong>Prabhat</strong> ke milan ki khushi mein aapka swagat hai.
@@ -101,7 +133,7 @@
 
       <!-- NIMANTRAN -->
       <section id="nimantran" class="view view--cream view--nimantaran" data-view="nimantran">
-        <article class="nimantaran-card reveal">
+        <article class="nimantaran-card nimantaran-card--royal reveal">
           <p class="invocation invocation--dark">॥ श्री गणेशाय नमः ॥</p>
           <p class="nim-small nim-small--dark">शादी से हमारा सौभाग्य</p>
           <h2 class="section-title section-title--dark">NIMANTRAN</h2>
@@ -296,53 +328,84 @@
       </section>
 
       <!-- SAMPARK -->
-      <section id="sampark" class="view view--contact" data-view="sampark">
-        <div class="split-top split-top--compact">
-          <h2 class="section-title section-title--dark reveal">Sampark Karein</h2>
-          <p class="tagline tagline--dark reveal">
-            Koi sawaal ho to seedha phone ya WhatsApp
+      <section id="sampark" class="view view--contact view--sampark-premium" data-view="sampark">
+        <div class="sampark-petals" aria-hidden="true"></div>
+        <header class="sampark-header reveal">
+          <p class="sampark-eyebrow">Kisi Bhi Jaankari Ke Liye</p>
+          <h2 class="sampark-title">Sampark Karein</h2>
+          <p class="sampark-tagline">
+            Baat karni ho ya raasta poochhna ho — bas ek call kijiye
           </p>
-        </div>
-        <div class="contact-grid">
-          <article class="contact-card reveal">
-            <div class="monogram">R</div>
-            <h3>Shri Rajeev Goyal</h3>
-            <p><a href="tel:+919258472356">+91 92584 72356</a></p>
-            <p class="contact-venue">मौ. बीचपट्टी, पिलखुवा (हापुड़)</p>
-            <div class="contact-actions">
-              <a class="btn btn-maroon" href="tel:+919258472356">Call Karein</a>
+        </header>
+        <div class="contact-grid contact-grid--premium">
+          <article class="contact-card contact-card--premium reveal">
+            <div class="monogram monogram--premium" aria-hidden="true">R</div>
+            <h3 class="contact-name">Rajeev Goyal</h3>
+            <p class="contact-phone">
+              <a href="tel:+919258472356">+91 92584 72356</a>
+            </p>
+            <div class="contact-actions contact-actions--stacked">
+              <a class="btn btn-contact btn-contact--call" href="tel:+919258472356">
+                <span class="btn-contact-icon" aria-hidden="true">☎</span>
+                Call Karein
+              </a>
               <a
-                class="btn btn-outline-dark"
+                class="btn btn-contact btn-contact--wa"
                 href="https://wa.me/919258472356"
                 target="_blank"
                 rel="noopener noreferrer"
-                >WhatsApp</a
               >
+                <span class="btn-contact-icon" aria-hidden="true">💬</span>
+                WhatsApp
+              </a>
             </div>
           </article>
-          <article class="contact-card reveal reveal-delay-2">
-            <div class="monogram">D</div>
-            <h3>Shri Darpan Goyal</h3>
-            <p><a href="tel:+919259125523">+91 92591 25523</a></p>
-            <div class="contact-actions">
-              <a class="btn btn-maroon" href="tel:+919259125523">Call Karein</a>
+          <article class="contact-card contact-card--premium reveal reveal-delay-2">
+            <div class="monogram monogram--premium" aria-hidden="true">D</div>
+            <h3 class="contact-name">Darpan Goyal</h3>
+            <p class="contact-phone">
+              <a href="tel:+919259125523">+91 92591 25523</a>
+            </p>
+            <div class="contact-actions contact-actions--stacked">
+              <a class="btn btn-contact btn-contact--call" href="tel:+919259125523">
+                <span class="btn-contact-icon" aria-hidden="true">☎</span>
+                Call Karein
+              </a>
               <a
-                class="btn btn-outline-dark"
+                class="btn btn-contact btn-contact--wa"
                 href="https://wa.me/919259125523"
                 target="_blank"
                 rel="noopener noreferrer"
-                >WhatsApp</a
               >
+                <span class="btn-contact-icon" aria-hidden="true">💬</span>
+                WhatsApp
+              </a>
             </div>
           </article>
         </div>
-        <footer class="site-footer">
-          <p class="footer-script reveal">Tania &amp; Prabhat</p>
-          <p class="reveal">14 December 2026 — Goel Regency, Pilkhuwa</p>
-          <button type="button" class="btn btn-gold btn-sm reveal" id="btn-aatish-footer">
+        <p class="sampark-venue reveal">
+          Mo. Beechpatti, Pilkhuwa (Hapur)<br />
+          <span class="sampark-venue-hi">मौ. बीचपट्टी, पिलखुवा (हापुड़)</span>
+        </p>
+        <footer class="site-footer site-footer--royal">
+          <div class="footer-petals" aria-hidden="true"></div>
+          <p class="footer-script footer-script--royal reveal">Tania &amp; Prabhat</p>
+          <div class="footer-divider reveal" aria-hidden="true">
+            <span class="footer-divider-line"></span>
+            <span class="footer-divider-ornament">❋</span>
+            <span class="footer-divider-line"></span>
+          </div>
+          <p class="footer-wish reveal">
+            Aapke aane se hamari khushiyaan doguni ho jaayengi — intezaar rahega!
+          </p>
+          <p class="footer-meta reveal">
+            14 December 2026 · Goel Regency, Pilkhuwa
+          </p>
+          <button type="button" class="btn btn-footer-aatish reveal" id="btn-aatish-footer">
             Aatishbaazi Chalaiye
+            <span class="btn-footer-play" aria-hidden="true">▶</span>
           </button>
-          <p class="copyright reveal">परिवार की ओर से सादर निमंत्रण</p>
+          <p class="footer-shubh reveal">॥ शुभ विवाह ॥</p>
         </footer>
       </section>
     </main>
