@@ -5,6 +5,10 @@
   const ctx = canvas.getContext("2d");
   const wrap = canvas.parentElement;
   let revealed = false;
+  let drawing = false;
+  let scratchMode = false;
+  let startX = 0;
+  let startY = 0;
 
   function resizeCanvas() {
     const rect = wrap.getBoundingClientRect();
@@ -56,9 +60,8 @@
       revealed = true;
       canvas.style.transition = "opacity 0.6s ease";
       canvas.style.opacity = "0";
-      setTimeout(() => {
-        canvas.style.pointerEvents = "none";
-      }, 600);
+      canvas.style.pointerEvents = "none";
+      canvas.style.touchAction = "auto";
     }
   }
 
@@ -72,29 +75,58 @@
     };
   }
 
-  let drawing = false;
-
-  canvas.addEventListener("pointerdown", (e) => {
-    drawing = true;
-    wrap?.classList.add("scratching");
-    canvas.setPointerCapture(e.pointerId);
-    const { x, y } = pointerPos(e);
-    scratch(x, y);
-  });
-
-  canvas.addEventListener("pointermove", (e) => {
-    if (!drawing) return;
-    const { x, y } = pointerPos(e);
-    scratch(x, y);
-  });
-
-  canvas.addEventListener("pointerup", () => {
+  function endDraw() {
     drawing = false;
-  });
+    scratchMode = false;
+    canvas.style.touchAction = "pan-y";
+    wrap?.classList.remove("scratching");
+  }
 
-  canvas.addEventListener("pointerleave", () => {
-    drawing = false;
-  });
+  canvas.addEventListener(
+    "pointerdown",
+    (e) => {
+      startX = e.clientX;
+      startY = e.clientY;
+      scratchMode = false;
+      drawing = true;
+    },
+    { passive: true }
+  );
+
+  canvas.addEventListener(
+    "pointermove",
+    (e) => {
+      if (!drawing || revealed) return;
+
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      const dist = Math.hypot(dx, dy);
+
+      if (!scratchMode && dist > 14) {
+        if (Math.abs(dy) > Math.abs(dx) * 1.2) {
+          endDraw();
+          return;
+        }
+        scratchMode = true;
+        canvas.style.touchAction = "none";
+        wrap?.classList.add("scratching");
+        try {
+          canvas.setPointerCapture(e.pointerId);
+        } catch {
+          /* ignore */
+        }
+      }
+
+      if (!scratchMode) return;
+      const { x, y } = pointerPos(e);
+      scratch(x, y);
+    },
+    { passive: true }
+  );
+
+  canvas.addEventListener("pointerup", endDraw);
+  canvas.addEventListener("pointercancel", endDraw);
+  canvas.addEventListener("lostpointercapture", endDraw);
 
   window.addEventListener("resize", resizeCanvas);
   resizeCanvas();

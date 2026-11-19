@@ -21,14 +21,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,7 +33,9 @@ body {
   color: var(--cream);
   background: var(--maroon-deep);
   min-height: 100vh;
+  height: auto;
   overflow-x: hidden;
+  overflow-y: visible;
   padding-top: var(--header-height);
 }
 
@@ -171,6 +169,11 @@ body {
   padding: 2rem 1.25rem 3rem;
   position: relative;
   scroll-margin-top: var(--header-height);
+  overflow: visible;
+}
+
+main#app {
+  overflow: visible;
 }
 
 .view--hero {
@@ -654,7 +657,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  touch-action: none;
+  touch-action: pan-y;
   cursor: crosshair;
   border-radius: 2px;
 }
