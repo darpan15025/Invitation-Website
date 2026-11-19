@@ -52,3 +52,13 @@ Requires `CLOUDFLARE_API_TOKEN` and account access.
 
 **Venue:** Goel Regency, Hapur Rd, Pilkhuwa, Uttar Pradesh 245304  
 **Date:** Monday, 14 December 2026, 7:00 PM
+
+## Deity imagery
+
+Hero and nimantan photos are real murti photographs from [Wikimedia Commons](https://commons.wikimedia.org/), stored under `assets/gods/`:
+
+| File | Commons source | License |
+|------|----------------|---------|
+| `ganesha.jpg` | [Lord Ganesha](https://commons.wikimedia.org/wiki/File:Lord_Ganesha.jpg) | CC0 |
+| `lakshmi.jpg` | [Goddess Lakshmi](https://commons.wikimedia.org/wiki/File:Goddess_Lakshmi.jpg) | CC0 |
+| `durga.jpg` | [Maa Durga](https://commons.wikimedia.org/wiki/File:Maa_Durga.jpg) (Sujit kumar) | CC BY-SA 4.0 |
