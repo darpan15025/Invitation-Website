@@ -56,6 +56,8 @@
         overlay.classList.add("active");
         setTimeout(() => overlay.classList.remove("active"), 400);
       }
+      const header = document.getElementById("site-header");
+      header?.classList.remove("is-hidden");
       target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
       history.pushState(null, "", `#${id}`);
     });

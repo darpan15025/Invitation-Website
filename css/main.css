@@ -11,6 +11,7 @@
   --font-display: "Cinzel", "Noto Serif Devanagari", serif;
   --font-script: "Great Vibes", cursive;
   --font-body: "Playfair Display", "Noto Serif Devanagari", serif;
+  --header-height: 3.25rem;
 }
 
 *,
@@ -21,6 +22,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -30,6 +33,13 @@ body {
   background: var(--maroon-deep);
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: var(--header-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+  }
 }
 
 #sparkle-layer {
@@ -71,12 +81,54 @@ body {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
-  background: linear-gradient(180deg, rgba(30, 5, 8, 0.98), rgba(61, 10, 16, 0.92));
+  background: linear-gradient(
+    180deg,
+    rgba(30, 5, 8, 0.97),
+    rgba(61, 10, 16, 0.88)
+  );
   border-bottom: 1px solid rgba(201, 162, 39, 0.35);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  will-change: transform;
+}
+
+.site-header.is-hidden {
+  transform: translate3d(0, -100%, 0);
+  pointer-events: none;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 3, 6, 0.98),
+    rgba(50, 8, 14, 0.95)
+  );
+}
+
+.site-header.is-scrolled .nav-bar {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.header-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  box-shadow: 0 0 8px rgba(232, 199, 102, 0.6);
+  transition: width 0.08s linear;
 }
 
 .nav-bar {
@@ -87,6 +139,7 @@ body {
   padding: 0.65rem 1rem;
   max-width: 1100px;
   margin: 0 auto;
+  transition: padding 0.35s ease;
 }
 
 .nav-bar a {
@@ -109,10 +162,12 @@ body {
 
 .view {
   display: block;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 2rem 1.25rem 3rem;
   position: relative;
-  scroll-margin-top: 56px;
+  scroll-margin-top: var(--header-height);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .view--hero {
