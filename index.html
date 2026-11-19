@@ -15,8 +15,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
   <body>
+    <div id="page-transition-overlay" aria-hidden="true"></div>
     <div id="sparkle-layer" aria-hidden="true"></div>
     <canvas id="fireworks-canvas" aria-hidden="true"></canvas>
 
@@ -24,6 +26,7 @@
       <nav class="nav-bar" aria-label="मुख्य मेनू">
         <a href="#ghar" data-route="ghar">Ghar</a>
         <a href="#jodi" data-route="jodi">Jodi</a>
+        <a href="#nimantran" data-route="nimantran">Nimantran</a>
         <a href="#shubh-tithi" data-route="shubh-tithi">Shubh Tithi</a>
         <a href="#karyakram" data-route="karyakram">Karyakram</a>
         <a href="#sthal" data-route="sthal">Sthal</a>
@@ -33,26 +36,31 @@
 
     <main id="app">
       <!-- GHAR -->
-      <section id="ghar" class="view view--hero active" data-view="ghar">
+      <section id="ghar" class="view view--hero pattern-drift" data-view="ghar">
+        <div class="mandala-ring mandala-glow" aria-hidden="true"></div>
         <div class="fairy-lights" aria-hidden="true"></div>
-        <div class="mandala-frame">
+        <div class="mandala-frame reveal">
           <p class="invocation">॥ श्री गणेशाय नमः ॥</p>
           <p class="subtitle-dev">शुभ विवाह</p>
           <h1 class="couple-script">Tanya &amp; Prabhat</h1>
-          <p class="tagline">Ek pyaari si shuruaat, saat janmon ka saath.</p>
-          <p class="venue-chip">Goel Regency — Pilkhuwa, Uttar Pradesh</p>
-          <div class="hero-actions">
+          <p class="tagline reveal reveal-delay-2">
+            Ek pyaari si shuruaat, saat janmon ka saath.
+          </p>
+          <p class="venue-chip reveal reveal-delay-3">
+            Goel Regency — Pilkhuwa, Uttar Pradesh
+          </p>
+          <div class="hero-actions reveal reveal-delay-4">
             <a class="btn btn-gold" href="#shubh-tithi">Scratch to Reveal Date</a>
             <button type="button" class="btn btn-outline-gold" id="btn-aatish-hero">
               Aatishbaazi Chalaiye
             </button>
           </div>
         </div>
-        <div class="goddess-row">
+        <div class="goddess-row reveal">
           <figure class="goddess-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ganesha_at_the_ball%2C_mysuru.jpg/440px-Ganesha_at_the_ball%2C_mysuru.jpg"
-              alt="श्री गणेश — विघ्नहर्ता"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ganesha_2018_Ganesh_Chaturthi.jpg/440px-Ganesha_2018_Ganesh_Chaturthi.jpg"
+              alt="श्री गणेश"
               width="220"
               height="280"
               loading="lazy"
@@ -61,8 +69,8 @@
           </figure>
           <figure class="goddess-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Lakshmi_on_lotus.jpg/440px-Lakshmi_on_lotus.jpg"
-              alt="माँ लक्ष्मी — सौभाग्य की देवी"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Lakshmi_seated_on_lotus.jpg/440px-Lakshmi_seated_on_lotus.jpg"
+              alt="माँ लक्ष्मी"
               width="220"
               height="280"
               loading="lazy"
@@ -71,8 +79,8 @@
           </figure>
           <figure class="goddess-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Durga_Mahishasuramardini.JPG/440px-Durga_Mahishasuramardini.JPG"
-              alt="माँ दुर्गा — शक्ति स्वरूपिणी"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Durga_image.jpg/440px-Durga_image.jpg"
+              alt="माँ दुर्गा"
               width="220"
               height="280"
               loading="lazy"
@@ -85,13 +93,39 @@
       <!-- JODI -->
       <section id="jodi" class="view view--cream" data-view="jodi">
         <div class="floating-petals" aria-hidden="true"></div>
-        <article class="nimantaran-card">
-          <p class="invocation">॥ श्री गणेशाय नमः ॥</p>
-          <p class="nim-small">आदि उत्पत्ति हमारा सौभाग्य</p>
-          <h2 class="section-title">NIMANTRAN</h2>
-          <div class="nim-body">
+        <div class="ganesha-hero reveal">
+          <p class="invocation invocation--dark">॥ श्री गणेशाय नमः ॥</p>
+          <p class="nim-small nim-small--dark">Aadi Utpatti Hamara Saubhagya</p>
+          <div class="ganesha-arch">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ganesha_on_leaf.jpg/500px-Ganesha_on_leaf.jpg"
+              alt="श्री गणेश — विघ्नहर्ता"
+              width="280"
+              height="320"
+              loading="lazy"
+            />
+          </div>
+          <p class="shloka">
+            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br />
+            निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+          </p>
+          <h2 class="section-title section-title--dark">Raja–Rani Ki Jodi</h2>
+          <p class="nim-body nim-body--intro">
+            Do parivaar, ek pavitra sangam — <strong>Tanya</strong> aur
+            <strong>Prabhat</strong> ke milan ki khushi mein aapka swagat hai.
+          </p>
+        </div>
+      </section>
+
+      <!-- NIMANTRAN -->
+      <section id="nimantran" class="view view--cream view--nimantaran" data-view="nimantran">
+        <article class="nimantaran-card reveal">
+          <p class="invocation invocation--dark">॥ श्री गणेशाय नमः ॥</p>
+          <p class="nim-small nim-small--dark">शादी से हमारा सौभाग्य</p>
+          <h2 class="section-title section-title--dark">NIMANTRAN</h2>
+          <div class="nim-body nim-body--dark">
             <p>
-              प्रभु श्री हरिवंश तथा श्री गोपाल जी की कृपा से श्रीमती
+              प्रभु श्री हरिवंश तथा श्री गोपाल जी की असीम कृपा से श्रीमती
               <strong>बबीता गोयल</strong> एवं श्री <strong>राजीव गोयल</strong>
               की सुपुत्री
             </p>
@@ -100,13 +134,13 @@
             <p class="sang">संग</p>
             <p class="name-line name-groom">CHI. <em>Prabhat</em></p>
             <p class="name-parents">
-              (श्रीमती <strong>दयावती</strong> तथा श्री <strong>परशुराम</strong>)
+              (श्रीमती <strong>दयावती</strong> एवं श्री <strong>परशुराम</strong>)
             </p>
-            <p>निवासी — कृष्ण गंज, पिछुवा, जिला — हापुड़</p>
+            <p>निवासी — कृष्णा गंज, पिलखुवा, जिला हापुड़, उ० प्र०</p>
             <p class="shubh-vivah">!! शुभ-विवाहोत्सव !!</p>
             <p>
-              के शुभ अवसर पर आप सपरिवार सादर आमंत्रित हैं। कृपया इस पावन
-              कार्य में अपनी उपस्थिति से अनुगृहीत करें।
+              के शुभ अवसर पर आप सपरिवार सादर आमंत्रित हैं। कृपया अपनी शुभ उपस्थिति से
+              हमें अनुग्रहित करें।
             </p>
           </div>
         </article>
@@ -114,13 +148,13 @@
 
       <!-- SHUBH TITHI -->
       <section id="shubh-tithi" class="view view--maroon" data-view="shubh-tithi">
-        <p class="eyebrow">Shubh Muhurat Ka Baaz</p>
-        <h2 class="section-title section-title--gold">Shubh Tithi</h2>
-        <p class="scratch-hint">
-          ✦ Ungli ya mouse se sunderi parat ko scratch kijiye aur tithi jaaniye ✦
+        <p class="eyebrow reveal">Shubh Muhurat Ka Samay</p>
+        <h2 class="section-title section-title--gold reveal">Shubh Tithi</h2>
+        <p class="scratch-hint reveal">
+          ✦ Ungli ya mouse se sundar parat ko scratch kijiye aur tithi jaaniye ✦
         </p>
 
-        <div class="scratch-wrap">
+        <div class="scratch-wrap reveal" id="scratch-wrap">
           <div class="reveal-card" id="date-reveal">
             <span class="day-name">SOMVAAR</span>
             <span class="date-num">14</span>
@@ -135,14 +169,14 @@
           ></canvas>
         </div>
 
-        <h3 class="remember-title">Tithi Yaad Rakhiyega!</h3>
-        <div class="countdown" id="countdown">
+        <h3 class="remember-title reveal">Tithi Yaad Rakhiyega!</h3>
+        <div class="countdown reveal" id="countdown">
           <div><span id="cd-days">00</span><small>Din</small></div>
           <div><span id="cd-hours">00</span><small>Ghante</small></div>
           <div><span id="cd-mins">00</span><small>Minute</small></div>
           <div><span id="cd-secs">00</span><small>Second</small></div>
         </div>
-        <div class="hero-actions">
+        <div class="hero-actions reveal">
           <a
             class="btn btn-gold"
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Shubh+Vivah+-+Tanya+%26+Prabhat&amp;dates=20261214T133000Z/20261214T163000Z&amp;details=Goel+Regency%2C+Pilkhuwa&amp;location=Goel+Regency%2C+Hapur+Rd%2C+Pilkhuwa%2C+UP+245304"
@@ -158,29 +192,29 @@
 
       <!-- KARYAKRAM -->
       <section id="karyakram" class="view view--maroon view--events" data-view="karyakram">
-        <p class="eyebrow">Shubh Agrahan</p>
-        <h2 class="section-title section-title--gold">Vaivahik Karyakram</h2>
+        <p class="eyebrow reveal">Shubh Aagaman</p>
+        <h2 class="section-title section-title--gold reveal">Vaivahik Karyakram</h2>
 
-        <h3 class="event-date">SOMVAAR • 14 DECEMBER 2026</h3>
+        <h3 class="event-date reveal">SOMVAAR • 14 DECEMBER 2026</h3>
         <div class="miniature-grid">
-          <article class="miniature-card">
+          <article class="miniature-card reveal">
             <div
               class="miniature-art miniature-art--baraat"
               role="img"
-              aria-label="मिनिएचर — बारात चित्रण"
+              aria-label="बारात"
             ></div>
             <span class="pill">Baraat</span>
             <h4>Swagat Baraat</h4>
             <p class="time">Shaam 7:00 baje</p>
             <p class="shayari">
-              Ghode ki chaal, shehnai ki laharen — naye rishton ka khula darwaza.
+              Ghode ki chaal, shehnai ki lehar — naye rishton ka khula darwaza.
             </p>
           </article>
-          <article class="miniature-card">
+          <article class="miniature-card reveal reveal-delay-2">
             <div
               class="miniature-art miniature-art--bhoj"
               role="img"
-              aria-label="मिनिएचर — प्रीतिभोज"
+              aria-label="प्रीतिभोज"
             ></div>
             <span class="pill">Bhoj</span>
             <h4>Preetibhoj</h4>
@@ -191,34 +225,34 @@
           </article>
         </div>
 
-        <h3 class="event-date">MANGALVAAR • 15 DECEMBER 2026</h3>
-        <article class="miniature-card miniature-card--wide">
+        <h3 class="event-date reveal">MANGALVAAR • 15 DECEMBER 2026</h3>
+        <article class="miniature-card miniature-card--wide reveal">
           <div
             class="miniature-art miniature-art--palaki"
             role="img"
-            aria-label="मिनिएचर — भीगी पालकी"
+            aria-label="भीगी पालकी"
           ></div>
           <span class="pill">Shubh</span>
           <h4>Bheegi Palkein</h4>
           <p class="time">Shaam 7:00 baje</p>
-          <p class="shayari">Barsaat ki boondon mein sajti hui dulhan ki yaadein.</p>
+          <p class="shayari">
+            Barsaat ki boondon mein sajti dulhan — yaadgar shaam ki raat.
+          </p>
         </article>
       </section>
 
       <!-- STHAL -->
       <section id="sthal" class="view view--split" data-view="sthal">
         <div class="split-top">
-          <p class="eyebrow eyebrow--dark">Pyaar bhari guzaarish</p>
-          <h2 class="section-title section-title--dark">Aapka Intezaar Hai</h2>
+          <p class="eyebrow eyebrow--dark reveal">Pyaar bhari guzaarish</p>
+          <h2 class="section-title section-title--dark reveal">Aapka Intezaar Hai</h2>
         </div>
         <div class="split-bottom">
-          <h2 class="section-title section-title--gold">Vivah Sthal</h2>
-          <p class="venue-sub">Goel Regency, Pilkhuwa</p>
-          <article class="venue-card">
+          <h2 class="section-title section-title--gold reveal">Vivah Sthal</h2>
+          <p class="venue-sub reveal">Goel Regency, Pilkhuwa</p>
+          <article class="venue-card reveal">
             <h3>GOEL REGENCY</h3>
-            <p class="address">
-              Hapur Rd, Pilkhuwa, Uttar Pradesh 245304
-            </p>
+            <p class="address">Hapur Rd, Pilkhuwa, Uttar Pradesh 245304</p>
             <div class="venue-times">
               <span>Shubh Muhurat 7:00 PM</span>
               <span>Reception 8:30 PM</span>
@@ -245,14 +279,17 @@
       <!-- SAMPARK -->
       <section id="sampark" class="view view--contact" data-view="sampark">
         <div class="split-top split-top--compact">
-          <h2 class="section-title section-title--dark">Sampark Karein</h2>
-          <p class="tagline tagline--dark">Koi sawaal ho to seedha phone ya WhatsApp</p>
+          <h2 class="section-title section-title--dark reveal">Sampark Karein</h2>
+          <p class="tagline tagline--dark reveal">
+            Koi sawaal ho to seedha phone ya WhatsApp
+          </p>
         </div>
         <div class="contact-grid">
-          <article class="contact-card">
+          <article class="contact-card reveal">
             <div class="monogram">R</div>
             <h3>Shri Rajeev Goyal</h3>
             <p><a href="tel:+919458584898">+91 94585 84898</a></p>
+            <p class="contact-venue">Goel Regency, Pilkhuwa (Hapur)</p>
             <div class="contact-actions">
               <a class="btn btn-maroon" href="tel:+919458584898">Call Karein</a>
               <a
@@ -264,7 +301,7 @@
               >
             </div>
           </article>
-          <article class="contact-card">
+          <article class="contact-card reveal reveal-delay-2">
             <div class="monogram">D</div>
             <h3>Shri Darpan Goyal</h3>
             <p><a href="tel:+919457064255">+91 94570 64255</a></p>
@@ -281,18 +318,19 @@
           </article>
         </div>
         <footer class="site-footer">
-          <p class="footer-script">Tanya &amp; Prabhat</p>
-          <p>14 December 2026 — Goel Regency, Pilkhuwa</p>
-          <button type="button" class="btn btn-gold btn-sm" id="btn-aatish-footer">
-            Aatishbaazi
+          <p class="footer-script reveal">Tanya &amp; Prabhat</p>
+          <p class="reveal">14 December 2026 — Goel Regency, Pilkhuwa</p>
+          <button type="button" class="btn btn-gold btn-sm reveal" id="btn-aatish-footer">
+            Aatishbaazi Chalaiye
           </button>
-          <p class="copyright">परिवार की ओर से सादर निमंत्रण</p>
+          <p class="copyright reveal">परिवार की ओर से सादर निमंत्रण</p>
         </footer>
       </section>
     </main>
 
     <script src="js/effects.js" defer></script>
     <script src="js/scratch.js" defer></script>
+    <script src="js/animations.js" defer></script>
     <script src="js/app.js" defer></script>
   </body>
 </html>

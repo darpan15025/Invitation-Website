@@ -76,6 +76,7 @@
 
   canvas.addEventListener("pointerdown", (e) => {
     drawing = true;
+    wrap?.classList.add("scratching");
     canvas.setPointerCapture(e.pointerId);
     const { x, y } = pointerPos(e);
     scratch(x, y);
