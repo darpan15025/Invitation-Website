@@ -6,9 +6,12 @@ Premium **single-page** royal Indian wedding invitation: palace gate opening, ja
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Page markup + SVG symbols |
-| `css/palace.css` | Netlify-style palace theme |
-| `js/palace.js` | Gate, scratch, countdown, fireworks, petals |
+| `index.html` | Palace invitation (full-width) |
+| `shaadicanvas.html` | **JoyInvite / ShaaDiCanvas** mobile canvas theme (480px) |
+| `css/palace.css` | Palace theme styles |
+| `css/shaadicanvas.css` | ShaaDiCanvas theme styles |
+| `js/palace.js` | Palace interactions |
+| `js/shaadicanvas.js` | Opening screen, scratch, countdown, dock nav |
 
 Assets: `assets/royal/` (Ganesha + couple art), `assets/events/` (baraat, palaki).
 
@@ -20,7 +23,9 @@ Preview this PR branch:
 
 **https://raw.githack.com/darpan15025/Invitation-Website/cursor/netlify-royal-html-dc4d/index.html**
 
-Sections use hashes: `#home`, `#jodi`, `#tithi`, `#nimantran`, `#karyakram`, `#sthal`, `#sampark`.
+**ShaaDiCanvas-style page:** add `/shaadicanvas.html` to any branch URL above.
+
+Sections: palace site uses `#home`, `#jodi`, …; canvas site uses `#home`, `#invitation`, `#events`, `#venue`, `#rsvp`.
 
 ## Local preview
 
