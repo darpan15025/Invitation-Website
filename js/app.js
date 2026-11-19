@@ -1,6 +1,53 @@
 (function initApp() {
+  const header = document.getElementById("site-header");
+  const progress = document.getElementById("header-progress");
   const navLinks = document.querySelectorAll(".nav-bar a[data-route]");
   const sections = document.querySelectorAll(".view[data-view]");
+
+  let lastScrollY = window.scrollY;
+  let scrollTicking = false;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function updateHeaderOnScroll() {
+    const y = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.min(100, (y / docHeight) * 100) : 0;
+
+    if (progress) {
+      progress.style.width = `${pct}%`;
+    }
+
+    if (header) {
+      header.classList.toggle("is-scrolled", y > 24);
+
+      if (!reducedMotion) {
+        const scrollingDown = y > lastScrollY;
+        const pastHero = y > 100;
+
+        if (scrollingDown && pastHero) {
+          header.classList.add("is-hidden");
+        } else {
+          header.classList.remove("is-hidden");
+        }
+      }
+    }
+
+    lastScrollY = y;
+    scrollTicking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        requestAnimationFrame(updateHeaderOnScroll);
+        scrollTicking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  updateHeaderOnScroll();
 
   function setActiveNav(route) {
     navLinks.forEach((a) => {
