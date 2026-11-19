@@ -2,6 +2,14 @@
 
 Static wedding invitation site (royal maroon & gold theme) with scratch-to-reveal date, goddess imagery, event miniatures, Google Maps, sparkles, and aatishbaazi (fireworks).
 
+## Shareable link (live now)
+
+**https://raw.githack.com/darpan15025/Invitation-Website/main/index.html**
+
+Use hash routes, e.g. `#jodi`, `#shubh-tithi`, `#sthal`.
+
+For a custom **Cloudflare Pages** URL (`*.pages.dev`), connect this repo in the Cloudflare dashboard or add `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` to GitHub Actions secrets.
+
 ## Local preview
 
 ```bash
