@@ -318,9 +318,9 @@ body {
   padding-bottom: 0;
 }
 
-.view--sampark-premium .site-footer {
+.view--sampark-premium .site-footer--royal {
   margin-top: 0;
-  border-top: 3px double rgba(201, 162, 39, 0.35);
+  border-top: none;
 }
 
 .sampark-petals {
@@ -497,6 +497,134 @@ body {
   font-family: "Noto Serif Devanagari", serif;
   font-size: 0.88rem;
   opacity: 0.9;
+}
+
+/* Closing footer — dark royal panel */
+
+.site-footer--royal {
+  position: relative;
+  overflow: hidden;
+  padding: 3.25rem 1.5rem 3.75rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.1), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle fill='%23ffffff' fill-opacity='0.03' cx='32' cy='32' r='28'/%3E%3Ccircle fill='none' stroke='%23ffffff' stroke-opacity='0.04' cx='32' cy='32' r='18'/%3E%3Ccircle fill='%23e8c766' fill-opacity='0.05' cx='32' cy='32' r='4'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #4a1018 0%, var(--royal-maroon) 42%, #1e0508 100%);
+}
+
+.footer-petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 10px 7px at 12% 35%, rgba(232, 199, 102, 0.5), transparent 70%),
+    radial-gradient(ellipse 8px 6px at 78% 22%, rgba(232, 199, 102, 0.45), transparent 70%),
+    radial-gradient(ellipse 9px 6px at 88% 68%, rgba(232, 199, 102, 0.4), transparent 70%),
+    radial-gradient(ellipse 7px 5px at 22% 82%, rgba(232, 199, 102, 0.42), transparent 70%);
+  opacity: 0.65;
+}
+
+.site-footer--royal > *:not(.footer-petals) {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-script--royal {
+  font-family: var(--font-script);
+  font-size: clamp(2.75rem, 10vw, 4rem);
+  color: var(--gold-light);
+  margin: 0 0 0.85rem;
+  line-height: 1.05;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 420px;
+  margin: 0 auto 1.35rem;
+}
+
+.footer-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232, 199, 102, 0.75), transparent);
+}
+
+.footer-divider-ornament {
+  color: var(--gold-light);
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.footer-wish {
+  max-width: 520px;
+  margin: 0 auto 1.15rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.8vw, 1.08rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(243, 232, 212, 0.92);
+}
+
+.footer-meta {
+  margin: 0 auto 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.95;
+}
+
+.btn-footer-aatish {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0 auto 1.75rem;
+  padding: 0.7rem 1.35rem;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(20, 4, 8, 0.55);
+  border: 1px solid rgba(232, 199, 102, 0.65);
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-footer-aatish:hover {
+  background: rgba(40, 8, 14, 0.75);
+  box-shadow: 0 10px 28px rgba(201, 162, 39, 0.2);
+}
+
+.btn-footer-play {
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  font-size: 0.55rem;
+  line-height: 1;
+  color: #c4b5fd;
+  border: 1px solid rgba(196, 181, 253, 0.5);
+  border-radius: 50%;
+  background: rgba(30, 10, 20, 0.6);
+}
+
+.footer-shubh {
+  margin: 0;
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  opacity: 0.95;
 }
 
 @media (max-width: 640px) {
