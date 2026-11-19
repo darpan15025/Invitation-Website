@@ -1,5 +1,11 @@
 (function initAnimations() {
+  document.documentElement.classList.add("js-ready");
+
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.querySelectorAll("#ghar .reveal").forEach((el) => {
+    el.classList.add("is-visible");
+  });
 
   document.querySelectorAll(".reveal").forEach((el, i) => {
     if (!el.classList.contains(`reveal-delay-${(i % 4) + 1}`)) {

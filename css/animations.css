@@ -1,6 +1,18 @@
+/* Visible by default so the page is never blank without JS (e.g. CDN hosts) */
+.reveal {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+#app {
+  position: relative;
+  z-index: 2;
+}
+
 /* Entrance & motion — respects reduced motion */
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
+  html.js-ready .reveal {
     opacity: 0;
     transform: translateY(36px) scale(0.98);
     filter: blur(4px);
@@ -10,7 +22,9 @@
       filter 0.85s ease;
   }
 
-  .reveal.is-visible {
+  html.js-ready #ghar .reveal,
+  html.js-ready #ghar .reveal.is-visible,
+  html.js-ready .reveal.is-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);

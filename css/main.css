@@ -189,6 +189,7 @@ body {
   height: min(520px, 92vw);
   left: 50%;
   top: 42%;
+  transform: translate(-50%, -50%);
   background: url("../assets/mandala.svg") center / contain no-repeat;
   opacity: 0.35;
   pointer-events: none;
