@@ -187,8 +187,8 @@
     }
   }
 
-  .scratch-wrap {
-    animation: scratchWiggle 3s ease-in-out infinite;
+  .scratch-wrap:not(.scratching) {
+    animation: scratchWiggle 4s ease-in-out infinite;
   }
 
   @keyframes scratchWiggle {
