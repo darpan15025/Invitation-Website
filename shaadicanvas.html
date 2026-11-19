@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hi-Latn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2a0811" />
+    <meta
+      name="description"
+      content="Tanya aur Prabhat ke Shubh Vivah mein aapka swagat — Goel Regency, Pilkhuwa, 14 December 2026."
+    />
+    <title>Tanya &amp; Prabhat | Shubh Vivah</title>
+    <meta property="og:title" content="Tanya &amp; Prabhat — Shubh Vivah" />
+    <meta property="og:image" content="assets/events/baraat.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Hindi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shaadicanvas.css" />
+  </head>
+  <body>
+    <div class="opening" id="opening" role="dialog" aria-label="Open invitation">
+      <div class="opening-inner">
+        <p class="hindi">॥ श्री गणेशाय नमः ॥</p>
+        <p class="eyebrow" style="margin-bottom: 12px">YOU ARE CORDIALLY INVITED</p>
+        <h1><span class="foil">#TanyaWedsPrabhat</span></h1>
+        <p>Aapke liye ek khaas nimantran — darwaza kholiye aur swagat lijiye.</p>
+        <button type="button" class="open-gold" id="openInvite">Open Invitation</button>
+      </div>
+    </div>
+
+    <div class="app" id="app">
+      <header class="hero" id="home">
+        <img
+          class="hero-bg"
+          src="assets/events/baraat.jpg"
+          width="1200"
+          height="800"
+          alt=""
+          loading="eager"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-top">
+          <p class="tag">Goel Regency · Pilkhuwa</p>
+        </div>
+        <div class="hero-copy">
+          <p class="small">PARIVAAR SAHIT · AAPKO SAADAR AAMANTRIT KARTE HAIN</p>
+          <h2>
+            <span class="foil">Tanya</span><span class="amp foil">&amp;</span
+            ><span class="foil">Prabhat</span>
+          </h2>
+          <div class="date-pill"><i></i>14 · 12 · 2026<i></i></div>
+        </div>
+        <a class="scroll-cue" href="#invitation" aria-label="Scroll down">⌄</a>
+      </header>
+
+      <section class="royal" id="invitation">
+        <p class="hindi rv">॥ शुभ विवाह ॥</p>
+        <p class="eyebrow rv">A celebration of love</p>
+        <h2 class="title rv">
+          Two Hearts<span class="s"><span class="foil">one beautiful beginning</span></span>
+        </h2>
+        <i class="dv rv" aria-hidden="true"></i>
+        <p class="lead rv">With immense joy in our hearts, we invite you to grace the wedding of</p>
+        <div class="mini-portraits rv">
+          <img src="assets/royal/bride-miniature.png" alt="वधू तानिया" loading="lazy" />
+          <img src="assets/royal/groom-miniature.png" alt="वर प्रभात" loading="lazy" />
+        </div>
+        <div class="couple rv">
+          <div class="person">
+            <small>THE BRIDE</small>
+            <strong><span class="foil">तानिया</span></strong>
+            <p>Daughter of Shrimati Babita Goyal &amp; Shri Rajeev Goyal</p>
+          </div>
+          <div class="seal" aria-hidden="true">
+            <span class="seal-ring"></span><span>&amp;</span>
+          </div>
+          <div class="person">
+            <small>THE GROOM</small>
+            <strong><span class="foil">प्रभात</span></strong>
+            <p>Son of Shrimati Monika Goyal &amp; Shri Lokesh Mohan Goyal</p>
+          </div>
+        </div>
+        <p class="city rv">PILKHUWA · UTTAR PRADESH</p>
+      </section>
+
+      <section class="royal low" id="save-date">
+        <p class="eyebrow rv">Shubh muhurat ka raaz</p>
+        <h2 class="title rv">Save Our Date</h2>
+        <p class="hint rv">Scratch the golden seal to reveal</p>
+        <div class="sframe rv">
+          <div class="coin">
+            <div class="coin-in">
+              <div class="scratch-reveal" aria-live="polite">
+                <span>SOMVAAR</span>
+                <strong class="foil">14</strong>
+                <span>DECEMBER · 2026</span>
+                <em>Goel Regency · Shaam 7:00 baje</em>
+              </div>
+              <canvas id="scratchCanvas" aria-label="Scratch to reveal the wedding date"></canvas>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="tap-reveal rv" id="tapReveal">Tap to reveal instead</button>
+        <div class="count-grid rv" id="afterCount" hidden>
+          <div class="count-box"><b id="cd-days">00</b><small>DAYS</small></div>
+          <div class="count-box"><b id="cd-hours">00</b><small>HOURS</small></div>
+          <div class="count-box"><b id="cd-mins">00</b><small>MINS</small></div>
+          <div class="count-box"><b id="cd-secs">00</b><small>SECS</small></div>
+        </div>
+      </section>
+
+      <section class="royal" id="nimantran">
+        <p class="eyebrow rv">Aapki upasthiti hamara saubhagya</p>
+        <h2 class="title rv">Nimantran</h2>
+        <i class="dv rv" aria-hidden="true"></i>
+        <article class="nim-card rv">
+          <p class="hi">॥ श्री गणेशाय नमः ॥</p>
+          <p>
+            परम स्नेही स्वजन, परमपिता परमात्मा की असीम अनुकम्पा से श्रीमती
+            <strong>बबीता गोयल</strong> एवं श्री <strong>राजीव गोयल</strong> अपनी प्रिय सुपुत्री
+          </p>
+          <p class="big foil">आयु. तानिया</p>
+          <p>
+            (सुपौत्री स्व. श्रीमती <strong>प्रेमवती गोयल</strong> एवं स्व. श्री
+            <strong>राजेन्द्र गोयल</strong>)
+          </p>
+          <p>संग</p>
+          <p class="big foil">चि. प्रभात</p>
+          <p>
+            (सुपुत्र श्रीमती <strong>मोनिका गोयल</strong> एवं श्री
+            <strong>लोकेश मोहन गोयल</strong>)
+          </p>
+          <p>निवासी — कृष्ण गंज, पिलखुवा, जिला हापुड़</p>
+          <p class="big">!! शुभ-विवाहोत्सव !!</p>
+          <p>
+            की पावन बेला पर आपको सादर आमंत्रित करते हैं। कृपया समय पर पधार कर नव-युगल को अपने स्नेहिल
+            आशीर्वाद से अभिशंसित करें।
+          </p>
+        </article>
+      </section>
+
+      <section class="royal low" id="events">
+        <p class="eyebrow rv">The big day</p>
+        <h2 class="title rv">
+          Shubh<span class="s"><span class="foil">Vivah</span></span>
+        </h2>
+        <i class="dv rv" aria-hidden="true"></i>
+        <p class="lead rv" style="margin-top: 0">Sirf vivah samaroh — ek din, ek yaadgaar sangam.</p>
+        <div class="event-list" id="eventsList"></div>
+      </section>
+
+      <section class="royal" id="venue">
+        <p class="eyebrow rv">Hum aapka intezaar karte hain</p>
+        <h2 class="title rv">The Venue</h2>
+        <div class="vplain rv">
+          <p class="venue-name"><span class="foil">Goel Regency</span></p>
+          <p class="city">HAPUR RD · PILKHUWA · UP 245304</p>
+          <div class="map-embed">
+            <iframe
+              title="Goel Regency map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Goel+Regency%2C+Hapur+Rd%2C+Pilkhuwa%2C+Uttar+Pradesh+245304&amp;output=embed"
+            ></iframe>
+          </div>
+          <a
+            class="btn-gold"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Goel+Regency+Hapur+Rd+Pilkhuwa+245304"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get Directions</a
+          >
+        </div>
+      </section>
+
+      <section class="royal low" id="rsvp">
+        <p class="eyebrow rv">Kisi bhi jaankari ke liye</p>
+        <h2 class="title rv">
+          We Can't Wait<span class="s"><span class="foil">to celebrate with you</span></span>
+        </h2>
+        <i class="dv rv" aria-hidden="true"></i>
+        <p class="lead rv">Baat karni ho ya raasta poochhna ho — bas ek call kijiye.</p>
+        <div class="rsvp-grid rv">
+          <div class="contact-chip">
+            <h3>Rajeev Goyal</h3>
+            <p class="ph">+91 92584 72356</p>
+            <a class="btn-line" href="tel:+919258472356">Call Karein</a>
+            <a
+              class="btn-gold"
+              style="margin-top: 10px; width: 100%"
+              href="https://wa.me/919258472356"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+          <div class="contact-chip">
+            <h3>Darpan Goyal</h3>
+            <p class="ph">+91 92591 25523</p>
+            <a class="btn-line" href="tel:+919259125523">Call Karein</a>
+            <a
+              class="btn-gold"
+              style="margin-top: 10px; width: 100%"
+              href="https://wa.me/919259125523"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+        <p class="city rv" style="margin-top: 18px">Mo. Beechpatti, Pilkhuwa (Hapur)</p>
+      </section>
+
+      <footer class="foot royal low">
+        <p class="names">
+          <span class="foil">Tanya</span> <span class="foil">&amp;</span>
+          <span class="foil">Prabhat</span>
+        </p>
+        <p class="hash">#TanyaWedsPrabhat</p>
+        <small>14 DECEMBER 2026 · GOEL REGENCY, PILKHUWA</small>
+        <p class="thanks rv in">
+          Aapke aane se hamari khushiyaan doguni ho jaayengi — intezaar rahega!
+        </p>
+        <p class="hindi" style="margin-top: 16px">॥ शुभ विवाह ॥</p>
+      </footer>
+    </div>
+
+    <nav class="dock" id="dock" aria-label="Quick navigation">
+      <a href="#home" class="on">HOME</a>
+      <a href="#events">WEDDING</a>
+      <a href="#venue">VENUE</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+
+    <script src="js/shaadicanvas.js" defer></script>
+  </body>
+</html>
