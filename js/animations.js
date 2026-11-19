@@ -7,10 +7,8 @@
     el.classList.add("is-visible");
   });
 
-  document.querySelectorAll(".reveal").forEach((el, i) => {
-    if (!el.classList.contains(`reveal-delay-${(i % 4) + 1}`)) {
-      el.classList.add(`reveal-delay-${(i % 4) + 1}`);
-    }
+  document.querySelectorAll(".reveal").forEach((el) => {
+    el.classList.add("is-visible");
   });
 
   if (!reduced) {
@@ -22,16 +20,10 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -5% 0px" }
     );
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    document.querySelectorAll("#ghar .reveal, #ghar .mandala-frame > *").forEach((el) => {
-      el.classList.add("is-visible");
-    });
-  } else {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
   }
 
   function spawnPetal() {
@@ -65,7 +57,7 @@
       const header = document.getElementById("site-header");
       header?.classList.remove("is-hidden");
       target.scrollIntoView({
-        behavior: reduced ? "auto" : "smooth",
+        behavior: "auto",
         block: "start",
         inline: "nearest",
       });

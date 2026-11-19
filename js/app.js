@@ -24,7 +24,7 @@
         const scrollingDown = y > lastScrollY;
         const pastHero = y > 100;
 
-        if (scrollingDown && pastHero) {
+        if (scrollingDown && pastHero && y < docHeight - 8) {
           header.classList.add("is-hidden");
         } else {
           header.classList.remove("is-hidden");
@@ -60,7 +60,7 @@
     if (hash) {
       const el = document.getElementById(hash);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        el.scrollIntoView({ behavior: "auto", block: "start", inline: "nearest" });
       }
       setActiveNav(hash);
     }
