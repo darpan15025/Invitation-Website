@@ -1,6 +1,6 @@
 # Tanya & Prabhat — Royal Indian Wedding Invitation
 
-Static wedding invitation site (royal maroon & gold theme) with scratch-to-reveal date, goddess imagery, event miniatures, Google Maps, sparkles, and aatishbaazi (fireworks).
+Static wedding invitation site with a **premium royal Indian miniature** look (deep maroon, zari gold, ivory panels), ornate Ganesha artwork, bride & groom portraits, scratch-to-reveal date, goddess murti photos, event miniatures, Google Maps, sparkles, and aatishbaazi (fireworks).
 
 ## Shareable link (live now)
 
