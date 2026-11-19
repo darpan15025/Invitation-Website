@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/premium.css" />
   </head>
   <body>
     <div id="page-transition-overlay" aria-hidden="true"></div>
@@ -59,15 +60,15 @@
         </div>
         <div class="goddess-row reveal is-visible">
           <figure class="goddess-card">
-            <img src="assets/ganesha.svg" alt="श्री गणेश" width="220" height="280" />
+            <img src="assets/gods/ganesha.jpg" alt="श्री गणेश" width="220" height="280" loading="lazy" />
             <figcaption>श्री गणेश</figcaption>
           </figure>
           <figure class="goddess-card">
-            <img src="assets/lakshmi.svg" alt="माँ लक्ष्मी" width="220" height="280" />
+            <img src="assets/gods/lakshmi.jpg" alt="माँ लक्ष्मी" width="220" height="280" loading="lazy" />
             <figcaption>माँ लक्ष्मी</figcaption>
           </figure>
           <figure class="goddess-card">
-            <img src="assets/durga.svg" alt="माँ दुर्गा" width="220" height="280" />
+            <img src="assets/gods/durga.jpg" alt="माँ दुर्गा" width="220" height="280" loading="lazy" />
             <figcaption>माँ दुर्गा</figcaption>
           </figure>
         </div>
@@ -80,7 +81,7 @@
           <p class="invocation invocation--dark">॥ श्री गणेशाय नमः ॥</p>
           <p class="nim-small nim-small--dark">Aadi Utpatti Hamara Saubhagya</p>
           <div class="ganesha-arch">
-            <img src="assets/ganesha.svg" alt="श्री गणेश — विघ्नहर्ता" width="280" height="320" />
+            <img src="assets/gods/ganesha.jpg" alt="श्री गणेश — विघ्नहर्ता" width="280" height="320" loading="lazy" />
           </div>
           <p class="shloka">
             वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br />
@@ -176,54 +177,66 @@
       </section>
 
       <!-- KARYAKRAM -->
-      <section id="karyakram" class="view view--maroon view--events" data-view="karyakram">
+      <section
+        id="karyakram"
+        class="view view--maroon view--events view--karyakram-premium"
+        data-view="karyakram"
+      >
         <p class="eyebrow reveal">Shubh Aagaman</p>
         <h2 class="section-title section-title--gold reveal">वैवाहिक कार्यक्रम</h2>
 
-        <h3 class="event-date reveal">सोमवार, 14 दिसम्बर 2026</h3>
-        <div class="miniature-grid">
-          <article class="miniature-card reveal">
-            <div
-              class="miniature-art miniature-art--baraat"
-              role="img"
-              aria-label="बारात"
-            ></div>
-            <span class="pill">Baraat</span>
-            <h4>स्वागत बारात</h4>
-            <p class="time">सायं 7:00 बजे</p>
-            <p class="shayari">
-              Ghode ki chaal, shehnai ki lehar — naye rishton ka khula darwaza.
+        <div class="k-date-divider reveal">
+          <span>SOMVAAR • 14 DECEMBER 2026</span>
+        </div>
+        <div class="k-premium-grid">
+          <article class="k-arch-card reveal">
+            <div class="k-arch-frame">
+              <img src="assets/events/baraat.jpg" alt="स्वागत बारात चित्र" width="400" height="220" />
+            </div>
+            <span class="k-pill">SWAGAT BARAAT</span>
+            <p class="k-time">SHAAM 7:00 BAJE</p>
+            <p class="k-shayari">
+              उमंग–अंगड़ाई, घोड़े की चाल, मुख मीठा और दुगना प्यार — नए रिश्तों का
+              खुला द्वार, स्वागत करो भरपूर।
             </p>
           </article>
-          <article class="miniature-card reveal reveal-delay-2">
-            <div
-              class="miniature-art miniature-art--bhoj"
-              role="img"
-              aria-label="प्रीतिभोज"
-            ></div>
-            <span class="pill">Bhoj</span>
-            <h4>प्रीतिभोज</h4>
-            <p class="time">रात्रि 8:00 बजे</p>
-            <p class="shayari">
-              Pyaar se bana, pyaar se parosa — apno ke saath yaadgar mithaas.
+          <article class="k-arch-card reveal reveal-delay-2">
+            <div class="k-arch-frame">
+              <img src="assets/events/bhoj.jpg" alt="प्रीतिभोज — दीप ज्योति" width="400" height="220" />
+            </div>
+            <span class="k-pill">PREETIBHOJ</span>
+            <p class="k-time">RAATRI 8:00 BAJE</p>
+            <p class="k-shayari">
+              प्यार से बना, प्यार से परोसा — अपनों के संग एक यादगार भोज और मिठास
+              भरी बातें।
             </p>
           </article>
         </div>
 
-        <h3 class="event-date reveal">मंगलवार, 15 दिसम्बर 2026</h3>
-        <article class="miniature-card miniature-card--wide reveal">
-          <div
-            class="miniature-art miniature-art--palaki"
-            role="img"
-            aria-label="शीघ्री पलकें"
-          ></div>
-          <span class="pill">Shubh</span>
-          <h4>शीघ्री पलकें</h4>
-          <p class="time">तारों की छाँव में</p>
-          <p class="shayari">
-            Chandni aur chaand ki roshni mein sajti hui yaadgar shaam.
-          </p>
-        </article>
+        <div class="k-date-divider reveal">
+          <span>MANGALVAAR • 15 DECEMBER 2026</span>
+        </div>
+        <div class="k-premium-grid k-premium-grid--pair">
+          <article class="k-arch-card reveal">
+            <div class="k-arch-frame">
+              <img src="assets/events/palaki.jpg" alt="शीघ्री पालकी" width="400" height="220" />
+            </div>
+            <span class="k-pill">SHUBH PALKI</span>
+            <p class="k-time">RAATRI SAMARPAN</p>
+          </article>
+          <article class="k-arch-card k-arch-card--verse reveal reveal-delay-2">
+            <span class="k-pill">BHEEGI PALKEIN</span>
+            <p class="k-time">TAARON KI CHHAON MEIN</p>
+            <p class="k-shayari">
+              तारों की छाँव में सँवरी हुई पालकी,<br />
+              हर पल में बसी है खुशियों की छाप ऐसी,<br />
+              स्मृति बनकर हँसी में, मिलकर बीताएँ वो शाम।
+            </p>
+            <p class="k-shayari k-shayari--en">
+              Under a canopy of stars — a night woven with laughter and blessings.
+            </p>
+          </article>
+        </div>
       </section>
 
       <!-- STHAL -->
