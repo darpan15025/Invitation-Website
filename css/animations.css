@@ -1,0 +1,366 @@
+/* Entrance & motion — respects reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px) scale(0.98);
+    filter: blur(4px);
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.85s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 0.12s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.24s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.36s;
+  }
+  .reveal-delay-4 {
+    transition-delay: 0.48s;
+  }
+
+  .mandala-glow {
+    animation: mandalaSpin 48s linear infinite;
+  }
+
+  @keyframes mandalaSpin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .couple-script {
+    animation: nameShimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes nameShimmer {
+    0%,
+    100% {
+      text-shadow: 0 0 12px rgba(232, 199, 102, 0.35);
+    }
+    50% {
+      text-shadow:
+        0 0 28px rgba(232, 199, 102, 0.75),
+        0 0 42px rgba(201, 162, 39, 0.4);
+    }
+  }
+
+  .mandala-frame {
+    animation: framePulse 5s ease-in-out infinite;
+  }
+
+  @keyframes framePulse {
+    0%,
+    100% {
+      box-shadow:
+        inset 0 0 40px rgba(201, 162, 39, 0.08),
+        0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+    50% {
+      box-shadow:
+        inset 0 0 55px rgba(201, 162, 39, 0.18),
+        0 24px 60px rgba(201, 162, 39, 0.15);
+    }
+  }
+
+  .goddess-card {
+    animation: gentleFloat 5s ease-in-out infinite;
+  }
+
+  .goddess-card:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+
+  .goddess-card:nth-child(3) {
+    animation-delay: 1.6s;
+  }
+
+  @keyframes gentleFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .miniature-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .miniature-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .miniature-art {
+    animation: kenBurns 14s ease-in-out infinite alternate;
+  }
+
+  @keyframes kenBurns {
+    from {
+      background-size: 105% auto;
+    }
+    to {
+      background-size: 115% auto;
+    }
+  }
+
+  .miniature-art--bhoj::after {
+    content: "";
+    position: absolute;
+    inset: auto 20% 15%;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255, 200, 80, 0.9), transparent 70%);
+    animation: diyaFlicker 2.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .miniature-art {
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes diyaFlicker {
+    0%,
+    100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+  }
+
+  .countdown > div {
+    animation: tickPop 1s ease infinite;
+  }
+
+  .countdown > div:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  .countdown > div:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .countdown > div:nth-child(4) {
+    animation-delay: 0.45s;
+  }
+
+  @keyframes tickPop {
+    0%,
+    92%,
+    100% {
+      transform: scale(1);
+    }
+    96% {
+      transform: scale(1.06);
+    }
+  }
+
+  .scratch-wrap {
+    animation: scratchWiggle 3s ease-in-out infinite;
+  }
+
+  @keyframes scratchWiggle {
+    0%,
+    88%,
+    100% {
+      transform: rotate(0deg);
+    }
+    92% {
+      transform: rotate(-1.2deg);
+    }
+    96% {
+      transform: rotate(1.2deg);
+    }
+  }
+
+  .scratch-wrap.scratching {
+    animation: none;
+  }
+
+  .nimantaran-card {
+    animation: cardBreath 6s ease-in-out infinite;
+  }
+
+  @keyframes cardBreath {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.008);
+    }
+  }
+
+  .venue-card {
+    animation: venueGlow 7s ease-in-out infinite;
+  }
+
+  @keyframes venueGlow {
+    0%,
+    100% {
+      border-color: var(--gold);
+    }
+    50% {
+      border-color: var(--gold-light);
+    }
+  }
+
+  .btn-gold {
+    animation: btnGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes btnGlow {
+    0%,
+    100% {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+    50% {
+      box-shadow: 0 8px 24px rgba(201, 162, 39, 0.55);
+    }
+  }
+
+  .fairy-lights {
+    animation: lightsSway 6s ease-in-out infinite;
+  }
+
+  @keyframes lightsSway {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(6px);
+    }
+  }
+
+  .pattern-drift {
+    animation: patternDrift 60s linear infinite;
+  }
+
+  @keyframes patternDrift {
+    from {
+      background-position: 0 0, 0 0;
+    }
+    to {
+      background-position: 120px 80px, -80px 40px;
+    }
+  }
+
+  .ganesha-arch img {
+    animation: archGlow 4s ease-in-out infinite;
+  }
+
+  @keyframes archGlow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px rgba(201, 162, 39, 0.7));
+    }
+  }
+}
+
+.petal {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% 0 50% 0;
+  background: linear-gradient(135deg, #e8a0a8, #c45c6a);
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 25;
+  animation: petalFall linear forwards;
+}
+
+.petal--gold {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+  width: 8px;
+  height: 8px;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  animation:
+    twinkle var(--dur, 2s) ease-in-out infinite,
+    sparkleDrift var(--drift-dur, 8s) ease-in-out infinite alternate;
+}
+
+@keyframes sparkleDrift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(12px, -8px);
+  }
+}
+
+#page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(201, 162, 39, 0.25), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 45;
+  transition: opacity 0.35s ease;
+}
+
+#page-transition-overlay.active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .mandala-glow,
+  .couple-script,
+  .mandala-frame,
+  .goddess-card,
+  .miniature-art,
+  .countdown > div,
+  .scratch-wrap,
+  .nimantaran-card,
+  .venue-card,
+  .btn-gold,
+  .fairy-lights,
+  .pattern-drift,
+  .petal {
+    animation: none !important;
+  }
+}

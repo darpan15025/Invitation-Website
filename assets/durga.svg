@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Durga">
+  <rect width="240" height="300" fill="#3d0a10" rx="8"/>
+  <circle cx="120" cy="115" r="50" fill="#c9a227" opacity="0.35"/>
+  <ellipse cx="120" cy="105" rx="35" ry="40" fill="#e8c766"/>
+  <path d="M120 55 L130 30 L140 55 M80 130 L55 120 L75 145 M160 130 L185 120 L165 145" stroke="#e8c766" stroke-width="4" fill="none"/>
+  <text x="120" y="268" text-anchor="middle" font-size="16" fill="#e8c766" font-family="serif">माँ दुर्गा</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Ganesha">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b1a24"/>
+      <stop offset="100%" stop-color="#4a0e14"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="300" fill="url(#g)" rx="8"/>
+  <ellipse cx="120" cy="95" rx="55" ry="62" fill="#e8c766" opacity="0.95"/>
+  <ellipse cx="120" cy="108" rx="38" ry="36" fill="#f5d98a"/>
+  <path d="M75 88 C60 50 95 35 120 50 C145 35 180 50 165 88" fill="#c9a227"/>
+  <circle cx="105" cy="102" r="4" fill="#3d0a10"/><circle cx="135" cy="102" r="4" fill="#3d0a10"/>
+  <path d="M108 118 Q120 128 132 118" stroke="#8b1a24" fill="none" stroke-width="2"/>
+  <path d="M120 145 Q95 175 70 210" stroke="#e8c766" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M120 145 Q145 175 170 210" stroke="#e8c766" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="120" y="268" text-anchor="middle" font-size="16" fill="#e8c766" font-family="serif">श्री गणेश</text>
+</svg>
