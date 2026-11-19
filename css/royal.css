@@ -116,25 +116,6 @@ body {
   letter-spacing: 0.12em;
 }
 
-.goddess-row--royal {
-  max-width: 880px;
-  gap: 1.5rem;
-  padding: 0 0.5rem 0.5rem;
-}
-
-.goddess-row--royal .goddess-card {
-  background: linear-gradient(180deg, rgba(36, 6, 12, 0.75), rgba(20, 3, 7, 0.55));
-  border: 2px solid rgba(232, 199, 102, 0.45);
-  box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.4),
-    inset 0 0 24px rgba(201, 162, 39, 0.05);
-}
-
-.goddess-row--royal .goddess-card figcaption {
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-}
-
 .view--cream--royal {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.12), transparent 55%),

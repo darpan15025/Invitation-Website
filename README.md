@@ -43,7 +43,7 @@ Requires `CLOUDFLARE_API_TOKEN` and account access.
 
 | Route | Content |
 |-------|---------|
-| `#ghar` | Hero, deities, fairy lights |
+| `#ghar` | Hero, ornate Ganesha, fairy lights |
 | `#jodi` | Formal nimantan |
 | `#shubh-tithi` | Scratch card + countdown |
 | `#karyakram` | Baraat, Preetibhoj, Palkein |
